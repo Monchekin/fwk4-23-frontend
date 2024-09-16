@@ -1,14 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-//import { Home } from 'fwk-4-components';
-// import { Login } from 'fwk-4-components';
-//import { Profile } from 'fwk-4-components';
-//import { Register } from 'fwk-4-components';
-//import { Workspace } from 'fwk-4-components';
 import Footer from './footer/Footer';
 import LoginPage from './pages/login/LoginPage';
 import RegisterPage from './pages/register/RegisterPage';
 import ProfilePage from './pages/profile/ProfilePage';
 import HomePage from './pages/home/HomePage';
+import WorkspacePage from './pages/workspace/WorkspacePage';
+
+//example: to display Loginpage - route to /login
 
 function App() {
 	return (
@@ -18,7 +16,8 @@ function App() {
 			<Route path="/login" element={<LoginPage />}></Route>
 			<Route path="/register" element={<RegisterPage />}></Route> 
 			<Route path="/profile" element={<ProfilePage />}></Route> 
-			<Route path="/home" element={<HomePage />}></Route> 	 
+			<Route path="/home" element={<HomePage />}></Route> 
+			<Route path="/workspace" element={<WorkspacePage />}></Route> 	 
 			</Routes>
 		</BrowserRouter>
 		<Footer />
@@ -27,8 +26,3 @@ function App() {
 }
 
 export default App;
-
-
-{/* 
-<Workspace />
- */}
