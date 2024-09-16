@@ -3,6 +3,7 @@ import { Login } from 'fwk-4-components';
 import { Profile } from 'fwk-4-components';
 import { Register } from 'fwk-4-components';
 import { Workspace } from 'fwk-4-components';
+import Footer from './footer/Footer';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 				<Register />
 				<hr />
 				<Workspace />
+				<Footer />
 			</div>
 		</>
 	);
