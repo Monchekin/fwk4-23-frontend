@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from 'fwk-4-components';
 import { Login } from 'fwk-4-components';
 import { Profile } from 'fwk-4-components';
@@ -7,7 +8,7 @@ import Footer from './footer/Footer';
 
 function App() {
 	return (
-		<>
+		<BrowserRouter>
 			<div>
 				<h1>Hej, kul att du hittade hit!</h1>
 				<p>Det vi har att erbjuda här är:</p>
@@ -22,7 +23,7 @@ function App() {
 				<Workspace />
 				<Footer />
 			</div>
-		</>
+		</BrowserRouter>
 	);
 }
 
