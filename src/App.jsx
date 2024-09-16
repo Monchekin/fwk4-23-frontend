@@ -1,30 +1,34 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from 'fwk-4-components';
-import { Login } from 'fwk-4-components';
-import { Profile } from 'fwk-4-components';
-import { Register } from 'fwk-4-components';
-import { Workspace } from 'fwk-4-components';
+//import { Home } from 'fwk-4-components';
+// import { Login } from 'fwk-4-components';
+//import { Profile } from 'fwk-4-components';
+//import { Register } from 'fwk-4-components';
+//import { Workspace } from 'fwk-4-components';
 import Footer from './footer/Footer';
+import LoginPage from './pages/login/LoginPage';
+import RegisterPage from './pages/register/RegisterPage';
+import ProfilePage from './pages/profile/ProfilePage';
+import HomePage from './pages/home/HomePage';
 
 function App() {
 	return (
+		<>
 		<BrowserRouter>
-			<div>
-				<h1>Hej, kul att du hittade hit!</h1>
-				<p>Det vi har att erbjuda här är:</p>
-				<Home />
-				<hr />
-				<Login />
-				<hr />
-				<Profile />
-				<hr />
-				<Register />
-				<hr />
-				<Workspace />
-				<Footer />
-			</div>
+			<Routes>
+			<Route path="/login" element={<LoginPage />}></Route>
+			<Route path="/register" element={<RegisterPage />}></Route> 
+			<Route path="/profile" element={<ProfilePage />}></Route> 
+			<Route path="/home" element={<HomePage />}></Route> 	 
+			</Routes>
 		</BrowserRouter>
+		<Footer />
+		</>
 	);
 }
 
 export default App;
+
+
+{/* 
+<Workspace />
+ */}

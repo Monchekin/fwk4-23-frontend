@@ -1,5 +1,7 @@
-const Register = () => {
-	return <div> - Register</div>;
-};
+// //import { Register } from "fwk-4-components";
 
-export default Register;
+// const Register = () => {
+// 	return <div> </div>;
+// };
+
+// export default Register;
