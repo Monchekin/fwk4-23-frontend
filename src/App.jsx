@@ -7,24 +7,25 @@ import HomePage from "./pages/home/HomePage";
 import WorkspacePage from "./pages/workspace/WorkspacePage";
 
 import Navbar from "./navbar/Navbar";
-
+import { Header } from "fwk-4-components";
 //example: to display Loginpage - route to /login
 
 function App() {
-	const location = useLocation();
-	
+  const location = useLocation();
+
   return (
     <>
+      <Header />
       {location.pathname !== "/" && location.pathname !== "/register" && (
         <Navbar />
       )}
-        <Routes>
-          <Route path="/" element={<LoginPage />}></Route>
-          <Route path="/register" element={<RegisterPage />}></Route>
-          <Route path="/profile" element={<ProfilePage />}></Route>
-          <Route path="/home" element={<HomePage />}></Route>
-          <Route path="/workspace" element={<WorkspacePage />}></Route>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<LoginPage />}></Route>
+        <Route path="/register" element={<RegisterPage />}></Route>
+        <Route path="/profile" element={<ProfilePage />}></Route>
+        <Route path="/home" element={<HomePage />}></Route>
+        <Route path="/workspace" element={<WorkspacePage />}></Route>
+      </Routes>
       <Footer />
     </>
   );
