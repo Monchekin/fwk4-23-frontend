@@ -1,10 +1,10 @@
-name: My First Action
+name: My action
 
 on:
   push:
     branches: [ main ]
 
-jobs:
+jobs: 
   react_on_push:
     runs-on: ubuntu-latest
     steps:
@@ -12,5 +12,7 @@ jobs:
       uses: sebastianpopp/discord-action@releases/v2
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
-        message: ${{ github.actor }} has successfully pushed to main.
-        
+        message: |
+          ${{ github.repository }} has been successfully deployed.
+          Pushed by: ${{ github.actor }}
+          Commit message: ${{ github.event.head_commit.message }}
