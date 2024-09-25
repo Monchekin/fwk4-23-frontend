@@ -1,4 +1,4 @@
-import { Login } from "fwk-4-components";
+import { Login } from "@niklaspelli/fwk4-23-components";
 
 const Login1 = () => {
   return (
