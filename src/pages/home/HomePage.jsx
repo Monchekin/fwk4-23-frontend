@@ -1,8 +1,7 @@
-import { Home } from "fwk-4-components";
+import { Home } from "@niklaspelli/fwk4-23-components";
 
 const HomePage = () => {
- 	return <div> <Home />
-    </div>;
-     };
-    
-     export default HomePage;
+  return <div> <Home /></div>;
+};
+
+export default HomePage;

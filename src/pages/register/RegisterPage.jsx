@@ -1,9 +1,7 @@
-import { Register } from "fwk-4-components";
+import { Register } from "@niklaspelli/fwk4-23-components";
 
 const RegisterPage = () => {
-	return (
-        <Register />
-    )
+  return <Register />;
 };
 
 export default RegisterPage;

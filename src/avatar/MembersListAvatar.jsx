@@ -1,19 +1,19 @@
 import React from "react";
-import { Avatar } from "fwk-4-components";
+import { Avatar } from "@niklaspelli/fwk4-23-components";
 import { mockMembers } from "../../data/MockMembers";
 
 const MembersListAvatar = () => {
-
-return (
+  return (
     <>
-    <ul>{mockMembers.map((member, id) => (
-        <li key={id}>
+      <ul>
+        {mockMembers.map((member, id) => (
+          <li key={id}>
             <Avatar src={member.profileImage} />
-        </li>
-    ))}</ul>
+          </li>
+        ))}
+      </ul>
     </>
-)
-
-}
+  );
+};
 
 export default MembersListAvatar;

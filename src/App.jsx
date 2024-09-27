@@ -7,7 +7,7 @@ import HomePage from "./pages/home/HomePage";
 import WorkspacePage from "./pages/workspace/WorkspacePage";
 
 import Navbar from "./navbar/Navbar";
-import { Header } from "fwk-4-components";
+/* import { Header } from "fwk-4-components"; */
 //example: to display Loginpage - route to /login
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {location.pathname !== "/" && location.pathname !== "/register" && (
         <Navbar />
       )}

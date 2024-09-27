@@ -1,7 +1,12 @@
-import { Profile } from "fwk-4-components";
+import { Profile } from "@niklaspelli/fwk4-23-components";
 
 const ProfilePage = () => {
-	return <div> <Profile /></div>;
+  return (
+    <div>
+      {" "}
+      <Profile />
+    </div>
+  );
 };
 
 export default ProfilePage;

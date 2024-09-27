@@ -1,7 +1,12 @@
-import { Login } from "fwk-4-components";
+import { Login } from "@niklaspelli/fwk4-23-components";
 
 const LoginPage = () => {
-	return <div> <Login /></div>;
+  return (
+    <div>
+      {" "}
+      <Login />
+    </div>
+  );
 };
 
 export default LoginPage;
