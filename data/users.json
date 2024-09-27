@@ -2,12 +2,12 @@
     {
       "username": "admin",
       "password": "admin123",
-      "role": "admin"
+      "userId": "new-user-uuid-123456"
     },
     {
       "username": "user",
       "password": "user123",
-      "role": "user"
+      "userId": "new-user-uuid-789012"
     }
   ]
   

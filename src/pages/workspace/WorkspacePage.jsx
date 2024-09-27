@@ -1,11 +1,11 @@
 import { Workspace } from "@niklaspelli/fwk4-23-components";
 
-import MembersListAvatar from "../../avatar/MembersListAvatar";
+// import MembersListAvatar from "../../avatar/MembersListAvatar";
 
 const WorkspacePage = () => {
   return (
     <>
-      <MembersListAvatar />
+      {/* <MembersListAvatar /> */}
       <Workspace />
     </>
   );

@@ -1,15 +1,14 @@
+import React, { useState } from "react";
+import UserAtom from "./UserAtom";
+import PasswordAtom from "./PasswordAtom";
+import LoginButton from "./LoginButton";
+import HeadLines from "./HeadLines";
 import {
   UserAtom,
   PasswordAtom,
   LoginButton,
   HeadLines,
 } from "@niklaspelli/fwk4-23-components";
-
-import React, { useState } from "react";
-import UserAtom from "./UserAtom";
-import PasswordAtom from "./PasswordAtom";
-import LoginButton from "./LoginButton";
-import HeadLines from "./HeadLines";
 
 // Login Component
 const Login1 = ({ loginFunction }) => {
