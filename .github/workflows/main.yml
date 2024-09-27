@@ -13,6 +13,6 @@ jobs:
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         message: |
-          ${{ repository }} has been successfully pushed to main.
-          Pushed by: ${{ github.actor }}
+         ${{ github.actor }} has pushed successfully to main in fwk4-23-fronend.
+         
          
