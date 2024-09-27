@@ -13,6 +13,6 @@ jobs:
       with:
         webhook: ${{ secrets.DISCORD_WEBHOOK }}
         message: |
-          ${{ github.repository }} has been successfully pushed to main.
+          ${{ repository }} has been successfully pushed to main.
           Pushed by: ${{ github.actor }}
          
