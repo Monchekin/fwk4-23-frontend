@@ -5,17 +5,16 @@ import RegisterPage from "./pages/register/RegisterPage";
 import ProfilePage from "./pages/profile/ProfilePage";
 import HomePage from "./pages/home/HomePage";
 import WorkspacePage from "./pages/workspace/WorkspacePage";
-
 import Navbar from "./navbar/Navbar";
-/* import { Header } from "fwk-4-components"; */
-//example: to display Loginpage - route to /login
+import { Header } from "@niklaspelli/fwk4-23-components";
+
 
 function App() {
   const location = useLocation();
 
   return (
     <>
-      {/* <Header /> */}
+      <Header /> 
       {location.pathname !== "/" && location.pathname !== "/register" && (
         <Navbar />
       )}
