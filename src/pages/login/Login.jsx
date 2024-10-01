@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import UserAtom from "./UserAtom";
 import PasswordAtom from "./PasswordAtom";
 import LoginButton from "./LoginButton";
@@ -8,6 +8,7 @@ import {
   PasswordAtom,
   LoginButton,
   HeadLines,
+  UniversalButton,
 } from "@niklaspelli/fwk4-23-components";
 
 // Login Component
@@ -29,8 +30,14 @@ const Login1 = ({ loginFunction }) => {
       <UserAtom onUserChange={setUser} />
       <PasswordAtom onPasswordChange={setPassword} />
       <LoginButton onClick={handleLoginClick} />
+      <UniversalButton
+        type="button"
+        title="Register"
+        onClick={() => console.log("hejhej")}
+      />
     </div>
   );
 };
 
 export default Login1;
+ */
