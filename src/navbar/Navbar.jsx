@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./NavbarStyle.css";
 import { Link, useNavigate } from "react-router-dom";
 // use module.css?
@@ -6,9 +6,28 @@ import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const navigate = useNavigate();
+  const sidebarRef = useRef(null);
 
   const openSidenav = () => setIsSideNavOpen(true);
   const closeSidenav = () => setIsSideNavOpen(false);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        isSideNavOpen &&
+        sidebarRef.current &&
+        !sidebarRef.current.contains(event.target)
+      ) {
+        setIsSideNavOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSideNavOpen]);
 
   const handleLogout = () => {
     navigate("/");
@@ -27,7 +46,10 @@ const Navbar = () => {
         </button>
       )}
       {isSideNavOpen && (
-        <div className={`sidenav ${isSideNavOpen ? "open" : "closed"}`}>
+        <div
+          className={`sidenav ${isSideNavOpen ? "open" : "closed"}`}
+          ref={sidebarRef}
+        >
           <button
             className="closeNavButton"
             onClick={closeSidenav}
