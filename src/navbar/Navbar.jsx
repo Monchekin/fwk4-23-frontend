@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./NavbarStyle.css";
 import { Link, useNavigate } from "react-router-dom";
-// use module.css?
+import { UniversalButton } from "@niklaspelli/fwk4-23-components";
 
 const Navbar = () => {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
@@ -51,11 +51,12 @@ const Navbar = () => {
           ref={sidebarRef}
         >
           <button
+            type="button"
             className="closeNavButton"
             onClick={closeSidenav}
             aria-label="Close navigation"
           >
-            X
+          X
           </button>
           <nav>
             <ul>
@@ -75,9 +76,9 @@ const Navbar = () => {
               src="https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt="Profile-pic"
             />
-            <p>Logged in: Malin</p>
+            <p>Hello Malin!</p>
           </div>
-          <button onClick={handleLogout}>LOGOUT</button>
+          <UniversalButton title="LOGOUT" type="button" onClick={handleLogout}></UniversalButton>
         </div>
       )}
     </div>
