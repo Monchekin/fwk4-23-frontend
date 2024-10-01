@@ -6,18 +6,22 @@ import ProfilePage from "./pages/profile/ProfilePage";
 import HomePage from "./pages/home/HomePage";
 import WorkspacePage from "./pages/workspace/WorkspacePage";
 import Navbar from "./navbar/Navbar";
-import { Header } from "@niklaspelli/fwk4-23-components";
-
+// import { Header } from "@niklaspelli/fwk4-23-components";
+import {PublicHeader} from "@niklaspelli/fwk4-23-components";
+import {PrivateHeader} from "@niklaspelli/fwk4-23-components";
 
 function App() {
   const location = useLocation();
 
+  const isPublicPage =
+    location.pathname === "/" || location.pathname === "/register";
+
   return (
     <>
-      <Header /> 
-      {location.pathname !== "/" && location.pathname !== "/register" && (
-        <Navbar />
-      )}
+      {isPublicPage ? <PublicHeader /> : <PrivateHeader />} 
+      
+      {!isPublicPage && <Navbar />} 
+      
       <Routes>
         <Route path="/" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegisterPage />}></Route>
@@ -25,6 +29,7 @@ function App() {
         <Route path="/home" element={<HomePage />}></Route>
         <Route path="/workspace" element={<WorkspacePage />}></Route>
       </Routes>
+      
       <Footer />
     </>
   );
