@@ -1,0 +1,14 @@
+/* MembersListAvatar.css */
+.avatar-list {
+    display: flex; /* Gör listan horisontell */
+    list-style-type: none; /* Ta bort standardpunkter */
+    padding: 0; /* Ta bort padding */
+}
+
+.avatar-list li {
+    margin-right: 10px; /* Avstånd mellan bilderna */
+}
+
+h4 {
+    color:white;
+}
