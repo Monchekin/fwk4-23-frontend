@@ -1,14 +1,22 @@
 /* MembersListAvatar.css */
-.avatar-list {
+.avatarlist {
     display: flex; /* Gör listan horisontell */
     list-style-type: none; /* Ta bort standardpunkter */
     padding: 0; /* Ta bort padding */
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    text-align: center;
 }
 
-.avatar-list li {
+.avatarlist li {
     margin-right: 10px; /* Avstånd mellan bilderna */
 }
 
 h4 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     color:white;
+    font-weight: 100;
 }
