@@ -2,7 +2,7 @@ import { Login } from "@niklaspelli/fwk4-23-components";
 import { useState } from "react";
 //import { mockMembers } from "../../../data/MockMembers";
 import { newMockUsers } from "../../../data/MockMembers";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [userId, setUserId] = useState(null);
@@ -29,6 +29,10 @@ const LoginPage = () => {
     <>
       <Login loginFunction={loginFunction} error={error} />
       {userId && <p>logged in user id {userId}</p>}
+      <div style={{ textAlign: "center" }}>
+        <p style={{ color: "white" }}>Don´t have an account?</p>
+        <Link to="./register">Register here</Link>
+      </div>
     </>
   );
 };
