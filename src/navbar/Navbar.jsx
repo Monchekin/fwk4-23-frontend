@@ -5,13 +5,31 @@ import { UniversalButton } from "@niklaspelli/fwk4-23-components";
 
 const Navbar = () => {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+  const [userData, setUserData] = useState({
+    userName: null,
+    userImage: null,
+  });
+
   const navigate = useNavigate();
   const sidebarRef = useRef(null);
 
   const openSidenav = () => setIsSideNavOpen(true);
   const closeSidenav = () => setIsSideNavOpen(false);
 
+  const getUserValues = () => {
+    const storedUser = localStorage.getItem("user");
+
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      setUserData({
+        userName: user.username,
+        userImage: user.profileImage,
+      });
+    }
+  };
+
   useEffect(() => {
+    getUserValues();
     function handleClickOutside(event) {
       if (
         isSideNavOpen &&
@@ -30,8 +48,9 @@ const Navbar = () => {
   }, [isSideNavOpen]);
 
   const handleLogout = () => {
-    navigate("/");
     console.log("Logout button has been clicked!");
+    localStorage.removeItem("user");
+    navigate("/");
   };
 
   return (
@@ -56,29 +75,32 @@ const Navbar = () => {
             onClick={closeSidenav}
             aria-label="Close navigation"
           >
-          X
+            X
           </button>
           <nav>
             <ul>
               <li>
-                <Link to="/profile">PROFILE</Link>
+                <Link to="/home">HOME</Link>
               </li>
               <li>
                 <Link to="/workspace">WORKSPACE</Link>
               </li>
               <li>
-                <Link to="/home">HOME</Link>
+                <Link to="/profile">PROFILE</Link>
               </li>
             </ul>
           </nav>
           <div>
-            <img
-              src="https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Profile-pic"
-            />
-            <p>Hello Julia!</p>
+            {userData.userImage && (
+              <img src={userData.userImage} alt="user img" />
+            )}
+            {userData.userName && <p>Hello {userData.userName}</p>}
           </div>
-          <UniversalButton title="LOGOUT" type="button" onClick={handleLogout}></UniversalButton>
+          <UniversalButton
+            title="LOGOUT"
+            type="button"
+            onClick={handleLogout}
+          ></UniversalButton>
         </div>
       )}
     </div>
