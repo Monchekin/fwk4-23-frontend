@@ -76,7 +76,7 @@ const Navbar = () => {
               src="https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
               alt="Profile-pic"
             />
-            <p>Hello Malin!</p>
+            <p>Hello Julia!</p>
           </div>
           <UniversalButton title="LOGOUT" type="button" onClick={handleLogout}></UniversalButton>
         </div>

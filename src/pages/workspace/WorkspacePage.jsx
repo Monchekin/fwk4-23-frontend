@@ -6,7 +6,6 @@ import MembersListAvatar from "../../avatar/MembersListAvatar"; // Justera sökv
 const WorkspacePage = () => {
   return (
     <>
-      
       <Workspace /> 
       <MembersListAvatar />
       <TaskBoard />
