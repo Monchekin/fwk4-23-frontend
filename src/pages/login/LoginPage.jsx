@@ -1,6 +1,5 @@
 import { Login } from "@niklaspelli/fwk4-23-components";
 import { useState } from "react";
-//import { mockMembers } from "../../../data/MockMembers";
 import { newMockUsers } from "../../../data/MockMembers";
 import { Link, useNavigate } from "react-router-dom";
 
