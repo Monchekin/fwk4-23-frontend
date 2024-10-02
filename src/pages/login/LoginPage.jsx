@@ -18,7 +18,7 @@ const LoginPage = () => {
       localStorage.setItem("user", JSON.stringify(user));
       setError(null);
       console.log("Login success", user.userId);
-      navigate("/home");
+      navigate("/workspace");
     } else {
       setError("invalid");
       console.log("login failed");
