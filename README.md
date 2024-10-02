@@ -6,12 +6,12 @@ This i an application used with vite@latest and the repo workes with reusable co
 
 ## Installation
 
-npm install @niklaspelli/fwk4-23-componentsFWK4
+npm install @niklaspelli/fwk4-23-components
 
 ### Package
 
 Read more about the components library
 
-https://github.com/Niklaspelli/FWK-4-Components/tree/main
+https://github.com/Niklaspelli/fwk4-23-components
 
 
