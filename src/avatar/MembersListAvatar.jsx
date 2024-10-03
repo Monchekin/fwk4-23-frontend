@@ -6,14 +6,16 @@ import styles from "./MembersListAvatar.module.css";
 const MembersListAvatar = () => {
   return (
     <>
+    <div className={styles.membersList}>
     <h4>Members in this project:</h4>
       <ul className={styles.avatarlist}>
         {newMockUsers.map((user, id) => (
           <li key={id}>
-            <Avatar src={user.profileImage} />
+            <Avatar className={styles.avatar} src={user.profileImage} />
           </li>
         ))}
       </ul>
+    </div>
     </>
   );
 };

@@ -1,22 +1,39 @@
 /* MembersListAvatar.css */
 .avatarlist {
     display: flex; /* Gör listan horisontell */
+    flex-direction: row;
+    justify-content: flex-end;
     list-style-type: none; /* Ta bort standardpunkter */
     padding: 0; /* Ta bort padding */
-    justify-content: center;
     margin-top: 1rem;
+    margin-right: 4rem;
     align-items: center;
     text-align: center;
 }
 
 .avatarlist li {
-    margin-right: 10px; /* Avstånd mellan bilderna */
+    margin-right: 1rem; /* Avstånd mellan bilderna */
+}
+
+li img {
+    border-radius: 50%; /* Runda hörn på bilderna */
+    width: 50px; /* Bildernas bredd */
+    height: 50px; /* Bildernas höjd */
+    border: 2px solid #1b024a; 
 }
 
 h4 {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-end;
+    text-align: end;
     color:white;
     font-weight: 100;
+    margin-right: 5rem;
+}
+
+.membersList {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    margin-top: 1rem;
+    text-decoration: underline #77a9ff;
 }
