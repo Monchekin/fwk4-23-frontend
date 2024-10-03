@@ -1,19 +1,17 @@
-# FWK4-Fronend
+# FWK4-23-Frontend
 
 ## Introduction
 
-[TEXT]
+This i an application used with vite@latest and the repo workes with reusable components. 
 
 ## Installation
 
-[TEXT]
+npm install @niklaspelli/fwk4-23-components
 
-Link to [@niklaspelli/fwk4-23-componentsFWK4](https://github.com/Niklaspelli/FWK-4-Components/tree/main).
+### Package
 
-To make the correct connection through link, change settings in the package.json in @niklaspelli/fwk4-23-componentsFWK4.
+Read more about the components library
 
-#### Changes in package.json
+https://github.com/Niklaspelli/fwk4-23-components
 
-"main": "src/index.js"
 
-"module": "src/index.js"

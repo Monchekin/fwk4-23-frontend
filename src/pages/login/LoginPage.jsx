@@ -10,14 +10,15 @@ const LoginPage = () => {
 
   const loginFunction = (username, password) => {
     const user = newMockUsers.find(
-      (user) => user.username === username && user.password === password
+      (user) => user.username === username && user.password === password,
     );
 
     if (user) {
       setUserId(user.userId);
+      localStorage.setItem("user", JSON.stringify(user));
       setError(null);
       console.log("Login success", user.userId);
-      navigate("/profile");
+      navigate("/workspace");
     } else {
       setError("invalid");
       console.log("login failed");
