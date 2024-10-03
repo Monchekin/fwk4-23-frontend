@@ -8,6 +8,7 @@ const MembersListAvatar = () => {
     <>
     <div className={styles.membersList}>
     <h4>Members in this project:</h4>
+    <div className={styles.avatars}>
       <ul className={styles.avatarlist}>
         {newMockUsers.map((user, id) => (
           <li key={id}>
@@ -15,6 +16,7 @@ const MembersListAvatar = () => {
           </li>
         ))}
       </ul>
+      </div>
     </div>
     </>
   );
