@@ -6,10 +6,8 @@ import ProfilePage from "./pages/profile/ProfilePage";
 import HomePage from "./pages/home/HomePage";
 import WorkspacePage from "./pages/workspace/WorkspacePage";
 import Navbar from "./navbar/Navbar";
-// import { Header } from "@niklaspelli/fwk4-23-components";
-import { PublicHeader } from "@niklaspelli/fwk4-23-components";
-import { PrivateHeader } from "@niklaspelli/fwk4-23-components";
-import "./App.css";
+import {PublicHeader} from "@niklaspelli/fwk4-23-components";
+import {PrivateHeader} from "@niklaspelli/fwk4-23-components";
 
 function App() {
   const location = useLocation();
