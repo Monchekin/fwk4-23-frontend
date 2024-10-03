@@ -25,6 +25,6 @@ export const newMockUsers = [
     password: "password",
     userId: "new-user-uuid-53134",
     profileImage:
-      "https://en.wikipedia.org/wiki/Megan_Fox#/media/File:Megan_Fox_in_2023_01.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/e9/Megan_Fox_in_2023_01.jpg",
   },
 ];
